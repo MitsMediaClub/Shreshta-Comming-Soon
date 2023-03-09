@@ -2,23 +2,26 @@
     font-family: Grifter;
     src: url(../font/GRIFTER\ Bold\ 700.otf);
 }
-
-::-webkit-scrollbar {
-    width: 0px;
-}
-  
-
+/* *{overflow-x: hidden;}  */
 body {
     background: rgb(2,0,36);
     background: linear-gradient(24deg, rgba(2,0,36,1) 0%, rgba(9,56,121,1) 53%, rgba(0,121,255,1) 100%);
-
+    background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     width: 100vw;
-
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
     margin: 0;
     position: relative;
     overflow-x: hidden;
+
+    /* Change */
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    /* Change */
 }
 .big-circle {
     width: 700px;
@@ -28,6 +31,7 @@ body {
     position: absolute;
     right: -100px;
     top: -200px;
+    z-index: -1;
 }
 .saturn {
     position: relative;
@@ -38,12 +42,22 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* Change */
+header {
+    position: absolute;
+    width: 100vw;
+    top: 0px;
+}
+/* Change */
+
 .small-circle {
     position: absolute;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background: linear-gradient(206.79deg, #02E5FF 10.14%, rgba(51, 147, 218, 0) 86.96%); 
+    overflow: hidden;
 }
 
 .ring {
@@ -55,9 +69,10 @@ body {
     border: solid 5px rgba(2, 229, 255, 0.7);
     filter: blur(1px);
     transform: rotate3d(1, 0, 0.5, 90deg);
+    z-index: -1;
     opacity: 0.3;
+    
 }
-
 h3 {
     font-family: 'Quicksand';
     color: rgba(255, 255, 255, 0.8);
@@ -68,6 +83,9 @@ h1 {
     font-family: 'Grifter';
     color: rgba(255, 255, 255, 0.8);
     font-size: 6rem;
+    
+
+
 }
 .get-ready{
     margin-bottom: 0px;
@@ -96,7 +114,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+
+    /* Change */
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    margin-bottom: 20px;
+    /* Change */
+    
 }
 .foot {
     margin-left: 10px;
